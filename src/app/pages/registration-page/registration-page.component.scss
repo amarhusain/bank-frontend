@@ -1,0 +1,27 @@
+ .text-rose-600 {
+     color: #e11d48;
+ }
+
+ .text-rose-700 {
+     color: #be123c;
+ }
+
+ .bg-rose-50 {
+     background-color: #fff1f2;
+ }
+
+ .btn-rose {
+     background-color: #e11d48;
+     border-color: #e11d48;
+     color: white;
+ }
+
+ .btn-rose:hover:not(:disabled) {
+     background-color: #be123c;
+     border-color: #be123c;
+ }
+
+ .btn-rose:disabled {
+     background-color: #f43f5e;
+     border-color: #f43f5e;
+ }

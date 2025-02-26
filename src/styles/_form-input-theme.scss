@@ -1,0 +1,43 @@
+// Override Bootstrap's default focus shadow
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($rose-500, 0.25);
+$input-focus-border-color: $rose-500;
+
+// Custom styles for inputs and buttons
+.form-control,
+.form-select {
+    &:focus {
+        border-color: $rose-500 !important;
+        box-shadow: $input-focus-box-shadow !important;
+    }
+}
+
+.form-check-input {
+    &:checked {
+        background-color: $rose-600;
+        border-color: $rose-600;
+    }
+
+    &:focus {
+        border-color: $rose-500;
+        box-shadow: $input-focus-box-shadow;
+    }
+}
+
+// Style for active nav links
+.nav-link {
+    &.active {
+        color: $rose-700 !important;
+        font-weight: 500;
+    }
+
+    &:hover {
+        color: $rose-600 !important;
+    }
+}
+
+
+// Custom placeholder color
+::placeholder {
+    color: $rose-300 !important;
+    opacity: 1;
+}

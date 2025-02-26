@@ -1,0 +1,142 @@
+/* eternal-bloom-form-styles.scss */
+// Define Eternal Bloom color palette
+$rose-50: #fff1f2;
+$rose-100: #ffe4e6;
+$rose-200: #fecdd3;
+$rose-300: #fda4af;
+$rose-400: #fb7185;
+$rose-500: #f43f5e;
+$rose-600: #e11d48;
+$rose-700: #be123c;
+$rose-800: #9f1239;
+$rose-900: #881337;
+
+// Map Eternal Bloom colors to Bootstrap theme colors
+$primary: $rose-600;
+$secondary: $rose-300;
+$success: #10b981; // Emerald-500 for success
+$info: #0ea5e9; // Sky-500 for info
+$warning: #f59e0b; // Amber-500 for warning
+$danger: #ef4444; // Red-500 for danger
+$light: $rose-50;
+$dark: $rose-900;
+
+
+// Optional: Adjust gray scale to complement the rose theme
+$white: #fff;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+$black: #000;
+
+$grays: ("100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900);
+
+// Override Bootstrap's default focus shadow
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($rose-500, 0.25);
+$input-focus-border-color: $rose-500;
+
+// Custom styles for inputs and buttons
+.form-control,
+.form-select {
+    &:focus {
+        border-color: $rose-500 !important;
+        box-shadow: $input-focus-box-shadow !important;
+    }
+}
+
+.form-check-input {
+    &:checked {
+        background-color: $rose-600;
+        border-color: $rose-600;
+    }
+
+    &:focus {
+        border-color: $rose-500;
+        box-shadow: $input-focus-box-shadow;
+    }
+}
+
+
+
+// Custom button styles
+.btn-rose {
+    @include button-variant($rose-500, $rose-500);
+}
+
+.btn-outline-rose {
+    @include button-outline-variant($rose-500);
+}
+
+.btn-rose {
+    background-color: #f43f5e !important;
+    border-color: #f43f5e !important;
+    color: white !important;
+}
+
+.btn-rose:hover {
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important;
+    color: white !important;
+}
+
+.btn-rose:hover:not(:disabled) {
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important;
+}
+
+.btn-rose:disabled {
+    background-color: #fda4af !important;
+    border-color: #fda4af !important;
+}
+
+.btn-outline-rose {
+    color: #f43f5e !important;
+    border-color: #f43f5e !important;
+}
+
+.btn-outline-rose:hover {
+    background-color: #f43f5e !important;
+    color: white !important;
+}
+
+
+// Custom form validation styles
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: $rose-500;
+
+    &:focus {
+        border-color: $rose-600;
+        box-shadow: 0 0 0 0.2rem rgba($rose-600, 0.25);
+    }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #dc3545; // Bootstrap's default danger color
+
+    &:focus {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+}
+
+// Custom placeholder color
+::placeholder {
+    color: $rose-300 !important;
+    opacity: 1;
+}

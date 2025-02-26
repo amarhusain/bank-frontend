@@ -1,0 +1,26 @@
+// _colors.scss
+
+$background-main: #fff5f6;
+$background-hero: #ffe4e6;
+$background-alternate: #fff0f0;
+$background-footer: #ffd6d9;
+$background-profile: #ffffff;
+$background-message: #f8f9fa;
+$background-search: #fafafa;
+
+$gradient-hero: linear-gradient(135deg, #fff5f6, #ffe4e6);
+
+// Usage example in a component
+.main-content {
+    background-color: $background-main;
+}
+
+.hero-section {
+    background: $gradient-hero;
+}
+
+.footer {
+    background-color: $background-footer;
+}
+
+// ... and so on for other sections

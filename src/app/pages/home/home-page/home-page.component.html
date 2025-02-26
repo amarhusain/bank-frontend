@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center">Your Balance: ${{ balance }}</h2>
+
+            <p *ngIf="message" class="text-center" style="color: green">{{ message }}</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <!-- Credit Money Card -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Credit Money</h3>
+                    <form [formGroup]="creditForm" (ngSubmit)="credit()">
+                        <input type="text" class="form-control" formControlName="creditAmount"
+                            placeholder="Enter amount" />
+                            <div *ngIf="creditForm.get('creditAmount')?.invalid && creditForm.get('creditAmount')?.touched" class="text-danger">
+                                Please enter a valid amount (numbers only).
+                              </div>
+                        <button class="btn btn-primary ms-2 mt-3" type="submit"
+                            [disabled]="creditForm.invalid">Credit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Debit Money Card -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Debit Money</h3>
+                    <form [formGroup]="debitForm" (ngSubmit)="debit()">
+                        <input type="text" class="form-control" formControlName="debitAmount"
+                            placeholder="Enter amount" />
+                            <div *ngIf="creditForm.get('debitAmount')?.invalid && creditForm.get('debitAmount')?.touched" class="text-danger">
+                                Please enter a valid amount (numbers only).
+                              </div>
+                        <button class="btn btn-primary ms-2 mt-3" type="submit"
+                            [disabled]="debitForm.invalid">Debit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

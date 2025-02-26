@@ -1,0 +1,28 @@
+.btn-rose {
+    background-color: #f43f5e;
+    border-color: #f43f5e;
+    color: white;
+}
+
+.btn-rose:hover {
+    background-color: #e11d48;
+    border-color: #e11d48;
+}
+
+.btn-outline-rose {
+    color: #f43f5e;
+    border-color: #f43f5e;
+}
+
+.btn-outline-rose:hover {
+    background-color: #f43f5e;
+    color: white;
+}
+
+.btn-tab-outline {
+    border-color: #e11d48;
+
+    &:hover {
+        border-color: #e11d48;
+    }
+}
